@@ -54,9 +54,9 @@ export const mockData = {
   ],
 
   contactInfo: {
-    phone: "+1 (555) 123-4567",
+    phone: "🇧🇪 +32 483 51 59 85",
     email: "thomas@tci-bv.com",
-    address: "123 Business District, Suite 500, Financial Center, NY 10001"
+    address: "Floraliënlaan 2, 2600 Anvers, Belgium"
   },
 
   ebookFeatures: [
