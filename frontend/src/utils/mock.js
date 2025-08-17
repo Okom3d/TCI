@@ -51,11 +51,11 @@ export const mockData = {
 
   ebookFeatures: [
     "Strategic Business Planning & Execution",
-    "AI Integration for Modern Businesses", 
+    "Potty Training Challenge Solutions", 
     "Investment Portfolio Optimization",
-    "Marketing & Growth Hacking Techniques",
+    "Personal Development & Life Skills",
     "Leadership & Management Best Practices",
-    "Financial Planning & Risk Management"
+    "Health & Wellness Transformation"
   ],
 
   ebookChapters: [
