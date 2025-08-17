@@ -14,7 +14,7 @@ export const mockData = {
     },
     {
       title: "EBOOK FORMATIONS",
-      description: "Comprehensive business formation guides and AI implementation strategies. Educational resources for modern entrepreneurs.",
+      description: "Comprehensive guides and educational resources covering diverse topics from business strategies to life skills and personal development.",
       icon: "ebook",
       link: "/ebook"
     }
