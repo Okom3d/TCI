@@ -11,7 +11,11 @@ const LandingPage = () => {
         <div className="container">
           <div className="nav-content">
             <div className="nav-logo">
-              <h2 className="logo-text">TC INVESTMENTS</h2>
+              {/* Replace with your actual TC logo */}
+              <div className="logo-container">
+                <span className="logo-text">TC</span>
+                <span className="logo-subtitle">INVESTMENTS</span>
+              </div>
             </div>
             <div className="nav-links">
               <Link to="/" className="nav-link">HOME</Link>
