@@ -295,52 +295,14 @@ body {
   padding: 20px 0;
 }
 
-.nav-logo .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .nav-logo .logo-text {
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 900;
-  font-size: 2rem;
-  color: white;
-  text-decoration: none;
-  letter-spacing: -0.05em;
-  background: white;
-  color: black;
-  padding: 8px 12px;
-  border-radius: 4px;
-  line-height: 1;
-}
-
-.nav-logo .logo-subtitle {
-  font-family: 'Inter', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--text-primary);
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
-
-/* Logo styling for actual TC logo */
-.nav-logo .tc-logo {
-  height: 40px;
-  width: auto;
-  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(207deg) brightness(97%) contrast(103%);
-  transition: all 0.3s ease;
-}
-
-.nav-logo .tc-logo:hover {
-  transform: scale(1.05);
-}
-
-.footer-logo-image {
-  height: 32px;
-  width: auto;
-  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(207deg) brightness(97%) contrast(103%);
-  margin-bottom: 16px;
 }
 
 .nav-links {
