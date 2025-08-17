@@ -69,14 +69,19 @@ const EbookPage = () => {
               </p>
               
               <div className="notify-form">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address"
-                  className="notify-input"
-                />
-                <button className="btn-primary notify-btn">
-                  NOTIFY ME <Mail size={20} className="ml-2" />
-                </button>
+                <form onSubmit={handleNotifySubmit}>
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email address"
+                    className="notify-input"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <button type="submit" className="btn-primary notify-btn">
+                    NOTIFY ME <Mail size={20} className="ml-2" />
+                  </button>
+                </form>
               </div>
             </div>
           </div>
