@@ -447,8 +447,8 @@ body {
   transform: translateX(8px);
 }
 
-/* Carousel Section */
-.carousel-section {
+/* Growth Showcase Carousel */
+.growth-carousel-section {
   padding: 120px 0;
   background: var(--secondary-olive);
 }
@@ -461,7 +461,7 @@ body {
 .carousel-track {
   display: flex;
   gap: 40px;
-  animation: slide 20s linear infinite;
+  animation: slide 25s linear infinite;
 }
 
 @keyframes slide {
@@ -474,27 +474,57 @@ body {
   flex-shrink: 0;
 }
 
-.testimonial-card {
+.growth-card {
   background: var(--bg-page);
   border: 1px solid var(--border-light);
   border-radius: 8px;
-  padding: 40px;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.growth-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--brand-primary);
+}
+
+.growth-image {
+  width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.testimonial-text {
-  margin-bottom: 24px;
-  font-style: italic;
-  line-height: 1.6;
+.growth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.author-name {
-  color: var(--text-primary);
-  margin-bottom: 4px;
+.growth-card:hover .growth-image img {
+  transform: scale(1.05);
 }
 
-.author-role {
-  color: var(--text-secondary);
+.growth-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 40px 20px 20px;
+  color: white;
+}
+
+.growth-title {
+  color: var(--brand-primary);
+  margin-bottom: 8px;
+}
+
+.growth-description {
+  color: var(--text-white);
+  line-height: 1.4;
 }
 
 /* Contact Info Section */
