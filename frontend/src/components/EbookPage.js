@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Mail } from "lucide-react";
 import { mockData } from "../utils/mock";
 
 const EbookPage = () => {
+  const [email, setEmail] = useState("");
+
+  const handleNotifySubmit = (e) => {
+    e.preventDefault();
+    console.log("Email notification signup:", email);
+    // TODO: Backend integration - send notification signup to thomas@tci-bv.com
+    // Mock submission for now
+    alert("Thank you! We'll notify you when the ebook is ready.");
+    setEmail("");
+  };
+
   return (
     <div className="ebook-page">
       {/* Navigation */}
