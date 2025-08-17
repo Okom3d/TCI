@@ -60,8 +60,8 @@ export const mockData = {
 
   ebookChapters: [
     {
-      title: "POTTY TRAINING MASTERY",
-      description: "Complete guide to successful potty training with proven methods, common challenges, and effective solutions for parents."
+      title: "PARENTING EXCELLENCE",
+      description: "Essential foundations for your child's best start in life. Written by a father of a 2.5-year-old who believes in continuous improvement in every aspect of parenting and child development."
     },
     {
       title: "BUSINESS FOUNDATIONS",
