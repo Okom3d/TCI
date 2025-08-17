@@ -60,28 +60,28 @@ export const mockData = {
 
   ebookChapters: [
     {
-      title: "FOUNDATION OF SUCCESS",
-      description: "Building strong business fundamentals and strategic planning frameworks for sustainable growth."
+      title: "POTTY TRAINING MASTERY",
+      description: "Complete guide to successful potty training with proven methods, common challenges, and effective solutions for parents."
     },
     {
-      title: "AI-POWERED OPERATIONS",
-      description: "Implementing artificial intelligence to streamline operations, reduce costs, and increase efficiency."
+      title: "BUSINESS FOUNDATIONS",
+      description: "Building strong business fundamentals and strategic planning frameworks for sustainable growth and success."
     },
     {
       title: "INVESTMENT STRATEGIES",
-      description: "Smart investment approaches for business owners and entrepreneurs looking to multiply their wealth."
+      description: "Smart investment approaches for individuals and business owners looking to multiply their wealth effectively."
     },
     {
-      title: "MARKETING MASTERY",
-      description: "Modern marketing techniques that drive customer acquisition and brand recognition in competitive markets."
+      title: "PERSONAL DEVELOPMENT",
+      description: "Life skills, productivity techniques, and personal growth strategies for achieving your full potential."
     },
     {
       title: "LEADERSHIP EXCELLENCE",
       description: "Management philosophies and leadership strategies that inspire teams and drive organizational success."
     },
     {
-      title: "SCALING & EXPANSION",
-      description: "Proven methodologies for scaling businesses, entering new markets, and maintaining growth momentum."
+      title: "HEALTH & WELLNESS",
+      description: "Comprehensive wellness strategies, fitness routines, and healthy lifestyle habits for optimal living."
     }
   ]
 };
