@@ -41,10 +41,7 @@ const ContactPage = () => {
         <div className="container">
           <div className="nav-content">
             <div className="nav-logo">
-              <Link to="/" className="logo-container">
-                <span className="logo-text">TC</span>
-                <span className="logo-subtitle">INVESTMENTS</span>
-              </Link>
+              <Link to="/" className="logo-text">TC INVESTMENTS</Link>
             </div>
             <div className="nav-links">
               <Link to="/" className="nav-link">
