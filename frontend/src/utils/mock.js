@@ -51,7 +51,7 @@ export const mockData = {
 
   ebookFeatures: [
     "Strategic Business Planning & Execution",
-    "Potty Training Challenge Solutions", 
+    "Parenting Excellence & Child Development", 
     "Investment Portfolio Optimization",
     "Personal Development & Life Skills",
     "Leadership & Management Best Practices",
