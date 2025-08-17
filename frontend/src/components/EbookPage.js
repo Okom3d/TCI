@@ -35,8 +35,8 @@ const EbookPage = () => {
             <h1 className="hero-title heading-1">EBOOK FORMATIONS</h1>
             
             <p className="hero-description body-large">
-              Comprehensive business growth strategies, investment insights, and AI implementation guides. 
-              Get ready to transform your business with our exclusive educational content.
+              Comprehensive guides covering diverse topics from business growth strategies to life skills and personal development. 
+              Get ready to transform every aspect of your life with our exclusive educational content.
             </p>
 
             <div className="coming-soon-features">
