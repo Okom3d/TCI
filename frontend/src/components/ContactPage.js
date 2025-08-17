@@ -23,7 +23,8 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Mock form submission
+    // TODO: Backend integration - send to thomas@tci-bv.com
+    // Mock form submission for now
     alert("Thank you for your message! We'll get back to you soon.");
     setFormData({
       name: "",
