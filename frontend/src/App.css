@@ -295,12 +295,31 @@ body {
   padding: 20px 0;
 }
 
+.nav-logo .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav-logo .logo-text {
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 900;
-  font-size: 1.5rem;
-  color: var(--text-primary);
+  font-size: 2rem;
+  color: white;
   text-decoration: none;
+  letter-spacing: -0.05em;
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.nav-logo .logo-subtitle {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
