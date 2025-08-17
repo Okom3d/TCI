@@ -20,26 +20,36 @@ export const mockData = {
     }
   ],
 
-  testimonials: [
+  growthImages: [
     {
-      text: "TC Investments transformed our business operations completely. Their AI consulting helped us increase efficiency by 40% in just 3 months.",
-      author: "Sarah Johnson",
-      role: "CEO, TechStart Solutions"
+      url: "https://images.unsplash.com/photo-1730382624709-81e52dd294d4",
+      title: "Strategic Growth",
+      description: "Building success step by step with proven methodologies"
     },
     {
-      text: "The investment opportunities presented by TC were exactly what we needed. Professional, transparent, and highly profitable partnerships.",
-      author: "Michael Chen",
-      role: "Founder, InnovateLab"
+      url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      title: "Data-Driven Decisions",
+      description: "Leveraging analytics for optimal investment outcomes"
     },
     {
-      text: "Outstanding consultation services. Their business growth strategies helped us expand into three new markets successfully.",
-      author: "Emma Rodriguez",
-      role: "Director, GrowthCorp"
+      url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      title: "Urban Development",
+      description: "Modern real estate opportunities in growing markets"
     },
     {
-      text: "TC's expertise in management and marketing revolutionized our approach. Revenue increased by 60% within the first quarter.",
-      author: "David Kim",
-      role: "President, NextGen Enterprises"
+      url: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11",
+      title: "Investment Analysis",
+      description: "Thorough market research and property evaluation"
+    },
+    {
+      url: "https://images.pexels.com/photos/33432095/pexels-photo-33432095.jpeg",
+      title: "Real Estate Excellence",
+      description: "Contemporary developments with strong ROI potential"
+    },
+    {
+      url: "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg",
+      title: "Nurturing Growth",
+      description: "Cultivating long-term success through careful planning"
     }
   ],
 
