@@ -55,7 +55,7 @@ export const mockData = {
 
   contactInfo: {
     phone: "+1 (555) 123-4567",
-    email: "contact@tcinvestments.com",
+    email: "thomas@tci-bv.com",
     address: "123 Business District, Suite 500, Financial Center, NY 10001"
   },
 
