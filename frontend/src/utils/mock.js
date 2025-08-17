@@ -14,7 +14,7 @@ export const mockData = {
     },
     {
       title: "EBOOK FORMATIONS",
-      description: "Comprehensive guides and educational resources covering diverse topics from business strategies to life skills and personal development.",
+      description: "Comprehensive guides and educational resources covering diverse topics from business strategies to parenting excellence and personal development.",
       icon: "ebook",
       link: "/ebook"
     }
