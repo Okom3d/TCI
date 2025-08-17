@@ -19,10 +19,10 @@
   --border-medium: #3f4816;                 /* Standard olive borders */
   --border-strong: #888680;                 /* Strong gray borders */
   
-  /* MAIN BRAND COLORS - Golden Yellow Theme */
-  --brand-primary: #ffb800;                 /* Primary golden yellow */
-  --brand-hover: rgba(255, 184, 0, 0.8);   /* Hover state */
-  --brand-active: rgba(255, 184, 0, 0.6);  /* Active/pressed state */
+  /* MAIN BRAND COLORS - Emerald Teal Theme */
+  --brand-primary: #14b8a6;                 /* Primary emerald teal */
+  --brand-hover: rgba(20, 184, 166, 0.8);  /* Hover state */
+  --brand-active: rgba(20, 184, 166, 0.6); /* Active/pressed state */
   
   /* Supporting Colors */
   --secondary-olive: #3f4816;               /* Dark olive green */
