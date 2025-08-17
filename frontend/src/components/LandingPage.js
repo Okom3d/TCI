@@ -75,20 +75,37 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Carousel Section */}
-      <section className="carousel-section">
+      {/* Growth Showcase Carousel */}
+      <section className="growth-carousel-section">
         <div className="container">
-          <h2 className="section-title heading-2">SUCCESS STORIES</h2>
+          <h2 className="section-title heading-2">GROWTH & INVESTMENTS</h2>
+          <p className="section-subtitle body-medium">
+            Showcasing our expertise in business growth, real estate development, and strategic investments
+          </p>
           <div className="carousel-container">
             <div className="carousel-track">
-              {mockData.testimonials.map((testimonial, index) => (
+              {mockData.growthImages.map((image, index) => (
                 <div key={index} className="carousel-item">
-                  <div className="testimonial-card">
-                    <p className="testimonial-text body-medium">"{testimonial.text}"</p>
-                    <div className="testimonial-author">
-                      <div className="author-info">
-                        <h4 className="author-name heading-6">{testimonial.author}</h4>
-                        <p className="author-role caption">{testimonial.role}</p>
+                  <div className="growth-card">
+                    <div className="growth-image">
+                      <img src={image.url} alt={image.title} />
+                      <div className="growth-overlay">
+                        <h3 className="growth-title heading-5">{image.title}</h3>
+                        <p className="growth-description body-small">{image.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {mockData.growthImages.map((image, index) => (
+                <div key={`duplicate-${index}`} className="carousel-item">
+                  <div className="growth-card">
+                    <div className="growth-image">
+                      <img src={image.url} alt={image.title} />
+                      <div className="growth-overlay">
+                        <h3 className="growth-title heading-5">{image.title}</h3>
+                        <p className="growth-description body-small">{image.description}</p>
                       </div>
                     </div>
                   </div>
