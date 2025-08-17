@@ -35,8 +35,9 @@ const EbookPage = () => {
             <h1 className="hero-title heading-1">EBOOK FORMATIONS</h1>
             
             <p className="hero-description body-large">
-              Comprehensive guides covering diverse topics from business growth strategies to life skills and personal development. 
-              Get ready to transform every aspect of your life with our exclusive educational content.
+              Comprehensive guides covering diverse topics from business growth strategies to parenting excellence. 
+              As a father of a 2.5-year-old, I believe in continuous improvement in every aspect of life - 
+              get ready to transform with our exclusive educational content.
             </p>
 
             <div className="coming-soon-features">
