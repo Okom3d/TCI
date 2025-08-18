@@ -109,6 +109,17 @@ const EbookPage = () => {
                     required
                     disabled={isSubmitting}
                   />
+                  
+                  {/* reCAPTCHA */}
+                  <div className="recaptcha-container-ebook">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={RECAPTCHA_CONFIG.siteKey}
+                      theme="dark"
+                      className="recaptcha-ebook"
+                    />
+                  </div>
+                  
                   <button type="submit" className="btn-primary notify-btn" disabled={isSubmitting}>
                     {isSubmitting ? 'SIGNING UP...' : 'NOTIFY ME'} <Mail size={20} className="ml-2" />
                   </button>
