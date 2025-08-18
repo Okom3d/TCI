@@ -122,16 +122,6 @@ const LandingPage = () => {
           <div className="contact-info-grid">
             <div className="contact-info-item">
               <div className="contact-icon">
-                <Phone size={24} />
-              </div>
-              <div className="contact-details">
-                <h4 className="contact-label caption">PHONE</h4>
-                <p className="contact-value body-medium">{mockData.contactInfo.phone}</p>
-              </div>
-            </div>
-            
-            <div className="contact-info-item">
-              <div className="contact-icon">
                 <Mail size={24} />
               </div>
               <div className="contact-details">
