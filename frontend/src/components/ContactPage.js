@@ -170,6 +170,16 @@ const ContactPage = () => {
                   ></textarea>
                 </div>
 
+                {/* reCAPTCHA */}
+                <div className="form-group">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={RECAPTCHA_CONFIG.siteKey}
+                    theme="dark"
+                    className="recaptcha-container"
+                  />
+                </div>
+
                 <button type="submit" className="btn-primary form-submit" disabled={isSubmitting}>
                   {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'} <Send size={20} className="ml-2" />
                 </button>
