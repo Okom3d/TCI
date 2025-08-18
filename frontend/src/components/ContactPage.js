@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send, Phone, Mail, MapPin } from "lucide-react";
 import { mockData } from "../utils/mock";
+import { sendContactForm } from "../services/emailService";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ const ContactPage = () => {
     service: "consultation",
     message: ""
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,19 +24,41 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Backend integration - send to thomas@tci-bv.com
-    // Mock form submission for now
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      service: "consultation",
-      message: ""
-    });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const result = await sendContactForm(formData);
+      
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: result.message
+        });
+        // Reset form on success
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "consultation",
+          message: ""
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.message
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'An unexpected error occurred. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
