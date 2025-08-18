@@ -1024,6 +1024,12 @@ body {
   opacity: 0.6;
 }
 
+/* Utility Classes */
+.ml-2 { margin-left: 0.5rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+
 /* Animation and Interaction Enhancements */
 .btn-primary,
 .btn-secondary,
