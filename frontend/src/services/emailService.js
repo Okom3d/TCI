@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 
 // EmailJS configuration
 const EMAIL_CONFIG = {
-  serviceID: 'YOUR_SERVICE_ID', // You'll provide this next
+  serviceID: 'service_pnib13a',
   contactTemplateID: 'template_contact_form',
   ebookTemplateID: 'template_ebook_signup',
   publicKey: 'lGO_5LuJvGdjmWsFU'
