@@ -975,11 +975,54 @@ body {
   }
 }
 
-/* Utility Classes */
-.ml-2 { margin-left: 0.5rem; }
-.mr-2 { margin-right: 0.5rem; }
-.mt-4 { margin-top: 1rem; }
-.mb-4 { margin-bottom: 1rem; }
+/* Status Messages */
+.status-message {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.status-message.success {
+  background: rgba(217, 251, 6, 0.1);
+  border: 1px solid var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.status-message.error {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form disabled states */
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled,
+.notify-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary:disabled:hover,
+.btn-secondary:disabled:hover {
+  transform: none;
+  opacity: 0.6;
+}
 
 /* Animation and Interaction Enhancements */
 .btn-primary,
