@@ -1024,6 +1024,41 @@ body {
   opacity: 0.6;
 }
 
+/* reCAPTCHA Styling */
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.recaptcha-container-ebook {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.recaptcha-ebook {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+/* reCAPTCHA dark theme adjustments for lime green design */
+.recaptcha-container .g-recaptcha,
+.recaptcha-container-ebook .g-recaptcha {
+  filter: hue-rotate(60deg) brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .recaptcha-ebook {
+    transform: scale(0.8);
+  }
+  
+  .recaptcha-container,
+  .recaptcha-container-ebook {
+    margin: 12px 0;
+  }
+}
+
 /* Utility Classes */
 .ml-2 { margin-left: 0.5rem; }
 .mr-2 { margin-right: 0.5rem; }
