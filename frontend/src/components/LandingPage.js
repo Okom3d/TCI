@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, TrendingUp, Users, BookOpen, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, BookOpen, Mail, MapPin } from "lucide-react";
 import { mockData } from "../utils/mock";
 
 const LandingPage = () => {
