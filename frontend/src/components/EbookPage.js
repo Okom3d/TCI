@@ -2,17 +2,41 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Mail } from "lucide-react";
 import { mockData } from "../utils/mock";
+import { sendEbookNotification } from "../services/emailService";
 
 const EbookPage = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleNotifySubmit = (e) => {
+  const handleNotifySubmit = async (e) => {
     e.preventDefault();
-    console.log("Email notification signup:", email);
-    // TODO: Backend integration - send notification signup to thomas@tci-bv.com
-    // Mock submission for now
-    alert("Thank you! We'll notify you when the ebook is ready.");
-    setEmail("");
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const result = await sendEbookNotification(email);
+      
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: result.message
+        });
+        setEmail(""); // Reset email field on success
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.message
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'An unexpected error occurred. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
