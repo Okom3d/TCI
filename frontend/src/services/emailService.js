@@ -8,11 +8,24 @@ const EMAIL_CONFIG = {
   publicKey: 'lGO_5LuJvGdjmWsFU'
 };
 
+// reCAPTCHA configuration
+const RECAPTCHA_CONFIG = {
+  siteKey: 'YOUR_RECAPTCHA_SITE_KEY' // You'll provide this from Google
+};
+
 // Initialize EmailJS
 emailjs.init(EMAIL_CONFIG.publicKey);
 
-export const sendContactForm = async (formData) => {
+export const sendContactForm = async (formData, recaptchaToken) => {
   try {
+    // Validate reCAPTCHA token
+    if (!recaptchaToken) {
+      return {
+        success: false,
+        message: 'Please complete the reCAPTCHA verification.'
+      };
+    }
+
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
@@ -21,7 +34,8 @@ export const sendContactForm = async (formData) => {
       message: formData.message,
       to_email: 'thomas@tci-bv.com',
       subject: `New Contact Form Submission - ${formData.service}`,
-      reply_to: formData.email
+      reply_to: formData.email,
+      recaptcha_token: recaptchaToken
     };
 
     const response = await emailjs.send(
@@ -44,14 +58,23 @@ export const sendContactForm = async (formData) => {
   }
 };
 
-export const sendEbookNotification = async (email) => {
+export const sendEbookNotification = async (email, recaptchaToken) => {
   try {
+    // Validate reCAPTCHA token
+    if (!recaptchaToken) {
+      return {
+        success: false,
+        message: 'Please complete the reCAPTCHA verification.'
+      };
+    }
+
     const templateParams = {
       user_email: email,
       to_email: 'thomas@tci-bv.com',
       subject: 'New Ebook Notification Signup',
       signup_date: new Date().toLocaleDateString(),
-      signup_time: new Date().toLocaleTimeString()
+      signup_time: new Date().toLocaleTimeString(),
+      recaptcha_token: recaptchaToken
     };
 
     const response = await emailjs.send(
@@ -73,3 +96,5 @@ export const sendEbookNotification = async (email) => {
     };
   }
 };
+
+export { RECAPTCHA_CONFIG };
