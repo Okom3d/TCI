@@ -10,7 +10,7 @@ const EMAIL_CONFIG = {
 
 // reCAPTCHA configuration
 const RECAPTCHA_CONFIG = {
-  siteKey: 'YOUR_RECAPTCHA_SITE_KEY' // You'll provide this from Google
+  siteKey: '6LeQSKorAAAAAOgy3YurDIWS6SjMlHgB4mvJ2uSi'
 };
 
 // Initialize EmailJS
