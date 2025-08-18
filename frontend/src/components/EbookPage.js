@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Mail } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { mockData } from "../utils/mock";
-import { sendEbookNotification } from "../services/emailService";
+import { sendEbookNotification, RECAPTCHA_CONFIG } from "../services/emailService";
 
 const EbookPage = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const recaptchaRef = useRef(null);
 
   const handleNotifySubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +17,10 @@ const EbookPage = () => {
     setSubmitStatus(null);
 
     try {
-      const result = await sendEbookNotification(email);
+      // Get reCAPTCHA token
+      const recaptchaToken = recaptchaRef.current?.getValue();
+      
+      const result = await sendEbookNotification(email, recaptchaToken);
       
       if (result.success) {
         setSubmitStatus({
@@ -23,6 +28,7 @@ const EbookPage = () => {
           message: result.message
         });
         setEmail(""); // Reset email field on success
+        recaptchaRef.current?.reset(); // Reset reCAPTCHA
       } else {
         setSubmitStatus({
           type: 'error',
