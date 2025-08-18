@@ -54,7 +54,6 @@ export const mockData = {
   ],
 
   contactInfo: {
-    phone: "🇧🇪 +32 483 51 59 85",
     email: "thomas@tci-bv.com",
     address: "Floraliënlaan 2, 2600 Anvers, Belgium"
   },
