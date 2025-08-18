@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Send, Mail, MapPin } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { mockData } from "../utils/mock";
-import { sendContactForm } from "../services/emailService";
+import { sendContactForm, RECAPTCHA_CONFIG } from "../services/emailService";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const ContactPage = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const recaptchaRef = useRef(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,7 +32,10 @@ const ContactPage = () => {
     setSubmitStatus(null);
 
     try {
-      const result = await sendContactForm(formData);
+      // Get reCAPTCHA token
+      const recaptchaToken = recaptchaRef.current?.getValue();
+      
+      const result = await sendContactForm(formData, recaptchaToken);
       
       if (result.success) {
         setSubmitStatus({
@@ -45,6 +50,8 @@ const ContactPage = () => {
           service: "consultation",
           message: ""
         });
+        // Reset reCAPTCHA
+        recaptchaRef.current?.reset();
       } else {
         setSubmitStatus({
           type: 'error',
