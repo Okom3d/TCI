@@ -163,9 +163,15 @@ const ContactPage = () => {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn-primary form-submit">
-                  SEND MESSAGE <Send size={20} className="ml-2" />
+                <button type="submit" className="btn-primary form-submit" disabled={isSubmitting}>
+                  {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'} <Send size={20} className="ml-2" />
                 </button>
+
+                {submitStatus && (
+                  <div className={`status-message ${submitStatus.type}`}>
+                    {submitStatus.message}
+                  </div>
+                )}
               </form>
             </div>
 
