@@ -1,11 +1,11 @@
 import emailjs from '@emailjs/browser';
 
-// EmailJS configuration - you'll need to set these up
+// EmailJS configuration
 const EMAIL_CONFIG = {
-  serviceID: 'service_tc_investments',
+  serviceID: 'YOUR_SERVICE_ID', // You'll provide this next
   contactTemplateID: 'template_contact_form',
   ebookTemplateID: 'template_ebook_signup',
-  publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' // This will be replaced with your actual key
+  publicKey: 'lGO_5LuJvGdjmWsFU'
 };
 
 // Initialize EmailJS
