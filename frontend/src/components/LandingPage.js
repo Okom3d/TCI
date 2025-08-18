@@ -116,7 +116,8 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Contact Info Section */}
+      {/* Contact Info Section - Temporarily Hidden */}
+      {/*
       <section className="contact-info-section">
         <div className="container">
           <div className="contact-info-grid">
@@ -142,6 +143,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Footer */}
       <footer className="footer">
