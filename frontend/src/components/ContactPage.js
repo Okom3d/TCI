@@ -177,8 +177,10 @@ const ContactPage = () => {
 
             {/* Contact Information */}
             <div className="contact-info-container">
-              <h2 className="info-title heading-3">CONTACT INFO</h2>
+              <h2 className="info-title heading-3">BUSINESS HOURS</h2>
               
+              {/* Contact Info List - Temporarily Hidden */}
+              {/*
               <div className="contact-info-list">
                 <div className="contact-info-item">
                   <div className="contact-icon">
@@ -200,9 +202,10 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
+              */}
 
               <div className="business-hours">
-                <h4 className="hours-title heading-5">BUSINESS HOURS</h4>
+                <h4 className="hours-title heading-5">OFFICE HOURS</h4>
                 <div className="hours-list">
                   <div className="hours-item">
                     <span className="day caption">MONDAY - FRIDAY</span>
