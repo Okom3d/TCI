@@ -101,11 +101,18 @@ const EbookPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    disabled={isSubmitting}
                   />
-                  <button type="submit" className="btn-primary notify-btn">
-                    NOTIFY ME <Mail size={20} className="ml-2" />
+                  <button type="submit" className="btn-primary notify-btn" disabled={isSubmitting}>
+                    {isSubmitting ? 'SIGNING UP...' : 'NOTIFY ME'} <Mail size={20} className="ml-2" />
                   </button>
                 </form>
+                
+                {submitStatus && (
+                  <div className={`status-message ${submitStatus.type}`}>
+                    {submitStatus.message}
+                  </div>
+                )}
               </div>
             </div>
           </div>
