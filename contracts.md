@@ -107,17 +107,89 @@ Best regards,
 TC Investments Website
 ```
 
-### Step 4: Update Configuration
-Replace in `/app/frontend/src/services/emailService.js`:
+# TC Investments - Email Integration with reCAPTCHA Protection
 
-```javascript
-const EMAIL_CONFIG = {
-  serviceID: 'YOUR_SERVICE_ID',        // From EmailJS dashboard
-  contactTemplateID: 'YOUR_CONTACT_TEMPLATE_ID',     // Contact form template ID
-  ebookTemplateID: 'YOUR_EBOOK_TEMPLATE_ID',         // Ebook signup template ID
-  publicKey: 'YOUR_PUBLIC_KEY'         // Your EmailJS public key
-};
-```
+## Overview
+This document outlines the email integration system for TC Investments website using EmailJS for direct email forwarding to thomas@tci-bv.com, now protected with Google reCAPTCHA v2 anti-spam verification.
+
+## Implementation Status: ✅ FRONTEND READY - NEEDS RECAPTCHA SITE KEY
+
+### Email Integration Method: EmailJS + Google reCAPTCHA
+- **Service**: EmailJS Browser SDK + react-google-recaptcha
+- **Security**: Google reCAPTCHA v2 ("I'm not a robot" checkbox)
+- **Approach**: Direct frontend-to-email forwarding with spam protection
+- **Target Email**: thomas@tci-bv.com
+- **No Backend Required**: All functionality handled by client-side services
+
+## reCAPTCHA Configuration Required
+
+### Current Status:
+✅ **Code implemented** - reCAPTCHA integrated in both forms
+✅ **Validation added** - Forms check for reCAPTCHA completion
+✅ **Styling applied** - Dark theme matching lime green design
+❌ **Site Key needed** - Replace `YOUR_RECAPTCHA_SITE_KEY` in emailService.js
+
+### To Complete Setup:
+1. **Get Google reCAPTCHA Site Key** from your Google account
+2. **Update emailService.js** with your actual Site Key
+3. **Test forms** to ensure reCAPTCHA works
+
+## Email Services Implemented (with reCAPTCHA)
+
+### 1. Contact Form Email (`sendContactForm`)
+**Security**: ✅ Protected by reCAPTCHA v2
+**Purpose**: Send contact form submissions directly to thomas@tci-bv.com
+
+**Data Sent**:
+- Name, Email, Company, Service, Message
+- reCAPTCHA verification token for spam protection
+
+**Validation**:
+- All fields required
+- Email format validation
+- reCAPTCHA completion required
+- User-friendly error messages
+
+### 2. Ebook Notification Email (`sendEbookNotification`)  
+**Security**: ✅ Protected by reCAPTCHA v2
+**Purpose**: Notify thomas@tci-bv.com when someone signs up for ebook notifications
+
+**Data Sent**:
+- User's email address
+- Signup date and time
+- reCAPTCHA verification token
+
+**Validation**:
+- Email format validation
+- reCAPTCHA completion required
+- Prevents bot signups
+
+## User Experience Flow (with reCAPTCHA)
+
+### Contact Form:
+1. User fills out contact form
+2. User completes reCAPTCHA ("I'm not a robot")
+3. Clicks "SEND MESSAGE" button
+4. System validates reCAPTCHA completion
+5. Success: Email sent + green success message + form reset + reCAPTCHA reset
+6. Error: Red error message (e.g., "Please complete the reCAPTCHA verification")
+
+### Ebook Notification:
+1. User enters email address
+2. User completes reCAPTCHA
+3. Clicks "NOTIFY ME" button  
+4. System validates reCAPTCHA completion
+5. Success: Green success message + email reset + reCAPTCHA reset
+6. Error: Red error message with specific validation feedback
+
+## Security Features Implemented
+✅ **Google reCAPTCHA v2** - "I'm not a robot" checkbox
+✅ **Dark theme** reCAPTCHA matching website design
+✅ **Form validation** - All required fields checked
+✅ **Email validation** - Proper email format required
+✅ **reCAPTCHA reset** - Automatically resets after successful submission
+✅ **Error handling** - Clear messages for missing reCAPTCHA
+✅ **Mobile responsive** - reCAPTCHA scales properly on mobile devices
 
 ## User Experience Flow
 
