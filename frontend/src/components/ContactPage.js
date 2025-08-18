@@ -216,11 +216,11 @@ const ContactPage = () => {
                 <div className="hours-list">
                   <div className="hours-item">
                     <span className="day caption">MONDAY - FRIDAY</span>
-                    <span className="time body-small">9:00 AM - 6:00 PM</span>
+                    <span className="time body-small">9:00 - 18:00 CET</span>
                   </div>
                   <div className="hours-item">
                     <span className="day caption">SATURDAY</span>
-                    <span className="time body-small">10:00 AM - 4:00 PM</span>
+                    <span className="time body-small">10:00 - 16:00 CET</span>
                   </div>
                   <div className="hours-item">
                     <span className="day caption">SUNDAY</span>
