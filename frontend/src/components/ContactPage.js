@@ -182,16 +182,6 @@ const ContactPage = () => {
               <div className="contact-info-list">
                 <div className="contact-info-item">
                   <div className="contact-icon">
-                    <Phone size={24} />
-                  </div>
-                  <div className="contact-details">
-                    <h4 className="contact-label caption">CALL US</h4>
-                    <p className="contact-value body-medium">{mockData.contactInfo.phone}</p>
-                  </div>
-                </div>
-                
-                <div className="contact-info-item">
-                  <div className="contact-icon">
                     <Mail size={24} />
                   </div>
                   <div className="contact-details">
