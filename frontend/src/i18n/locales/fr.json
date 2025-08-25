@@ -1,0 +1,154 @@
+{
+  "navigation": {
+    "home": "ACCUEIL",
+    "contact": "CONTACT",
+    "backToHome": "RETOUR À L'ACCUEIL"
+  },
+  "hero": {
+    "title": "ENTREPRENEUR\nINVESTISSEUR\nCONSEILLER",
+    "description": "Toujours à la recherche de nouvelles opportunités pour développer les entreprises et créer de la valeur grâce à des investissements stratégiques et des solutions IA.",
+    "getStarted": "COMMENCER",
+    "exploreEbook": "EXPLORER L'EBOOK"
+  },
+  "services": {
+    "title": "NOS SERVICES",
+    "subtitle": "Trois domaines clés où nous créons une valeur exceptionnelle pour nos clients",
+    "consultation": {
+      "title": "CONSULTATION",
+      "description": "Conseil stratégique en entreprise pour la croissance, la gestion et l'optimisation marketing. Transformez vos opérations avec des méthodologies éprouvées."
+    },
+    "investments": {
+      "title": "INVESTISSEMENTS",
+      "description": "Découvrez des opportunités d'investissement lucratives et des partenariats stratégiques. Construisons ensemble la richesse grâce à des investissements intelligents."
+    },
+    "ebook": {
+      "title": "FORMATIONS EBOOK",
+      "description": "Guides complets et ressources éducatives couvrant des sujets divers, des stratégies commerciales à l'excellence parentale et au développement personnel."
+    }
+  },
+  "carousel": {
+    "title": "CROISSANCE & INVESTISSEMENTS",
+    "subtitle": "Présentation de notre expertise en croissance d'entreprise, développement immobilier et investissements stratégiques",
+    "items": {
+      "strategicGrowth": {
+        "title": "Croissance Stratégique",
+        "description": "Construire le succès étape par étape avec des méthodologies éprouvées"
+      },
+      "dataDriven": {
+        "title": "Décisions Basées sur les Données",
+        "description": "Exploiter l'analytique pour des résultats d'investissement optimaux"
+      },
+      "urbanDevelopment": {
+        "title": "Développement Urbain",
+        "description": "Opportunités immobilières modernes dans les marchés en croissance"
+      },
+      "investmentAnalysis": {
+        "title": "Analyse d'Investissement",
+        "description": "Recherche de marché approfondie et évaluation immobilière"
+      },
+      "realEstateExcellence": {
+        "title": "Excellence Immobilière",
+        "description": "Développements contemporains avec un fort potentiel de ROI"
+      },
+      "nurturingGrowth": {
+        "title": "Cultiver la Croissance",
+        "description": "Cultiver le succès à long terme grâce à une planification minutieuse"
+      }
+    }
+  },
+  "contact": {
+    "heroTitle": "CONTACTEZ-NOUS",
+    "heroDescription": "Prêt à développer votre entreprise ? Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs.",
+    "formTitle": "ENVOYEZ-NOUS UN MESSAGE",
+    "businessHours": "HEURES D'OUVERTURE", 
+    "officeHours": "HEURES DE BUREAU",
+    "form": {
+      "fullName": "NOM COMPLET",
+      "emailAddress": "ADRESSE EMAIL",
+      "company": "ENTREPRISE (OPTIONNEL)",
+      "serviceInterest": "SERVICE D'INTÉRÊT",
+      "message": "MESSAGE",
+      "messagePlaceholder": "Parlez-nous de votre projet ou de vos objectifs...",
+      "sendMessage": "ENVOYER LE MESSAGE",
+      "sending": "ENVOI EN COURS..."
+    },
+    "services": {
+      "consultation": "Consultation d'Entreprise",
+      "investments": "Opportunités d'Investissement",
+      "aiConsulting": "Conseil en IA",
+      "ebook": "Formations Ebook"
+    },
+    "hours": {
+      "mondayFriday": "LUNDI - VENDREDI",
+      "saturday": "SAMEDI",
+      "sunday": "DIMANCHE", 
+      "mondayFridayTime": "9:00 - 18:00 CET",
+      "saturdayTime": "10:00 - 16:00 CET",
+      "sundayTime": "FERMÉ"
+    },
+    "success": "Votre message a été envoyé avec succès !",
+    "error": "Échec de l'envoi du message. Veuillez réessayer ou nous contacter directement.",
+    "recaptchaRequired": "Veuillez compléter la vérification reCAPTCHA."
+  },
+  "ebook": {
+    "comingSoon": "BIENTÔT DISPONIBLE",
+    "title": "FORMATIONS EBOOK",
+    "description": "Guides complets couvrant des sujets divers, des stratégies de croissance d'entreprise à l'excellence parentale. En tant que père d'un enfant de 2,5 ans, je crois en l'amélioration continue dans tous les aspects de la vie - préparez-vous à vous transformer avec notre contenu éducatif exclusif.",
+    "whatToExpect": "À QUOI S'ATTENDRE",
+    "getNotified": "SOYEZ INFORMÉ QUAND C'EST PRÊT",
+    "notifyDescription": "Soyez le premier à savoir quand notre ebook complet de formation d'entreprise devient disponible.",
+    "notifyMe": "PRÉVENEZ-MOI",
+    "signingUp": "INSCRIPTION EN COURS...",
+    "emailPlaceholder": "Entrez votre adresse email",
+    "readyToGrow": "PRÊT À DÉVELOPPER VOTRE ENTREPRISE MAINTENANT ?",
+    "readyDescription": "N'attendez pas l'ebook. Commencez votre transformation aujourd'hui avec nos services de consultation.",
+    "startConsultation": "COMMENCER LA CONSULTATION",
+    "exploreInvestments": "EXPLORER LES INVESTISSEMENTS",
+    "features": {
+      "businessPlanning": "Planification et Exécution Stratégique d'Entreprise",
+      "parentingExcellence": "Excellence Parentale et Développement de l'Enfant",
+      "investmentOptimization": "Optimisation du Portefeuille d'Investissement",
+      "personalDevelopment": "Développement Personnel et Compétences de Vie",
+      "leadership": "Leadership et Meilleures Pratiques de Gestion",
+      "healthWellness": "Transformation Santé et Bien-être"
+    },
+    "chapters": {
+      "parentingExcellence": {
+        "title": "EXCELLENCE PARENTALE",
+        "description": "Fondations essentielles pour le meilleur départ de votre enfant dans la vie. Écrit par un père d'un enfant de 2,5 ans qui croit en l'amélioration continue dans tous les aspects de la parentalité et du développement de l'enfant."
+      },
+      "businessFoundations": {
+        "title": "FONDATIONS D'ENTREPRISE",
+        "description": "Construire des fondamentaux d'entreprise solides et des cadres de planification stratégique pour une croissance et un succès durables."
+      },
+      "investmentStrategies": {
+        "title": "STRATÉGIES D'INVESTISSEMENT",
+        "description": "Approches d'investissement intelligentes pour les individus et les propriétaires d'entreprise cherchant à multiplier leur richesse efficacement."
+      },
+      "personalDevelopment": {
+        "title": "DÉVELOPPEMENT PERSONNEL",
+        "description": "Compétences de vie, techniques de productivité et stratégies de croissance personnelle pour atteindre votre plein potentiel."
+      },
+      "leadershipExcellence": {
+        "title": "EXCELLENCE EN LEADERSHIP",
+        "description": "Philosophies de gestion et stratégies de leadership qui inspirent les équipes et favorisent le succès organisationnel."
+      },
+      "healthWellness": {
+        "title": "SANTÉ ET BIEN-ÊTRE", 
+        "description": "Stratégies de bien-être complètes, routines de fitness et habitudes de vie saines pour une vie optimale."
+      }
+    },
+    "success": "Merci ! Nous vous préviendrons quand l'ebook sera prêt.",
+    "error": "Échec de l'inscription aux notifications. Veuillez réessayer.",
+    "recaptchaRequired": "Veuillez compléter la vérification reCAPTCHA."
+  },
+  "footer": {
+    "description": "Développer les entreprises grâce à des investissements stratégiques, du conseil et des solutions IA.",
+    "copyright": "© 2024 TC Investments. Tous droits réservés."
+  },
+  "language": {
+    "switchTo": "Passer à",
+    "french": "Français", 
+    "english": "English"
+  }
+}
