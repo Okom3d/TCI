@@ -9,6 +9,7 @@ A modern, responsive business website built with React and FastAPI, featuring co
 ## ✨ Features
 
 - 🎨 **Modern Design**: Lime green accents on professional black backgrounds
+- 🌐 **Bilingual Support**: Full English and French translations with language switcher
 - 📱 **Mobile Responsive**: Perfect display on all devices
 - 🖼️ **Growth Carousel**: Professional business and investment imagery
 - 📧 **Email Integration**: Contact forms with EmailJS
