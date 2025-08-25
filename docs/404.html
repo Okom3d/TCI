@@ -28,6 +28,20 @@
       <script type="module" crossorigin src="/TCI/assets/index-DS2eg7vP.js"></script>
       <link rel="stylesheet" crossorigin href="/TCI/assets/index-BnAWJ_B7.css">
     </head>
+    <script>
+  function show(msg){ 
+    var box=document.createElement('pre');
+    box.style.cssText='white-space:pre-wrap;background:#fee;color:#900;padding:12px;border:1px solid #900;font-family:monospace';
+    box.textContent=msg;
+    document.body.prepend(box);
+  }
+  window.addEventListener('error', e=>{
+    show('JS error: '+e.message+'\nFile: '+e.filename+':'+e.lineno);
+  });
+  window.addEventListener('unhandledrejection', e=>{
+    show('Unhandled promise rejection: '+(e.reason&&e.reason.message||e.reason));
+  });
+</script>
     <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
