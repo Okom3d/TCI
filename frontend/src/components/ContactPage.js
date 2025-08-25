@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ArrowLeft, Send, Mail, MapPin } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { mockData } from "../utils/mock";
 import { sendContactForm, RECAPTCHA_CONFIG } from "../services/emailService";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const ContactPage = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,7 +64,7 @@ const ContactPage = () => {
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'An unexpected error occurred. Please try again.'
+        message: t('contact.error')
       });
     } finally {
       setIsSubmitting(false);
@@ -80,8 +83,9 @@ const ContactPage = () => {
             <div className="nav-links">
               <Link to="/" className="nav-link">
                 <ArrowLeft size={20} className="mr-2" />
-                BACK TO HOME
+                {t('navigation.backToHome')}
               </Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -91,9 +95,9 @@ const ContactPage = () => {
       <section className="contact-hero">
         <div className="container">
           <div className="contact-hero-content">
-            <h1 className="hero-title heading-1">GET IN TOUCH</h1>
+            <h1 className="hero-title heading-1">{t('contact.heroTitle')}</h1>
             <p className="hero-description body-large">
-              Ready to grow your business? Let's discuss how we can help you achieve your goals.
+              {t('contact.heroDescription')}
             </p>
           </div>
         </div>
@@ -105,10 +109,10 @@ const ContactPage = () => {
           <div className="contact-grid">
             {/* Contact Form */}
             <div className="contact-form-container">
-              <h2 className="form-title heading-3">SEND US A MESSAGE</h2>
+              <h2 className="form-title heading-3">{t('contact.formTitle')}</h2>
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
-                  <label className="form-label caption">FULL NAME</label>
+                  <label className="form-label caption">{t('contact.form.fullName')}</label>
                   <input
                     type="text"
                     name="name"
@@ -120,7 +124,7 @@ const ContactPage = () => {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label caption">EMAIL ADDRESS</label>
+                  <label className="form-label caption">{t('contact.form.emailAddress')}</label>
                   <input
                     type="email"
                     name="email"
@@ -132,7 +136,7 @@ const ContactPage = () => {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label caption">COMPANY (OPTIONAL)</label>
+                  <label className="form-label caption">{t('contact.form.company')}</label>
                   <input
                     type="text"
                     name="company"
@@ -143,29 +147,29 @@ const ContactPage = () => {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label caption">SERVICE OF INTEREST</label>
+                  <label className="form-label caption">{t('contact.form.serviceInterest')}</label>
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
                     className="form-select"
                   >
-                    <option value="consultation">Business Consultation</option>
-                    <option value="investments">Investment Opportunities</option>
-                    <option value="ai-consulting">AI Consulting</option>
-                    <option value="ebook">Ebook Formations</option>
+                    <option value="consultation">{t('contact.services.consultation')}</option>
+                    <option value="investments">{t('contact.services.investments')}</option>
+                    <option value="ai-consulting">{t('contact.services.aiConsulting')}</option>
+                    <option value="ebook">{t('contact.services.ebook')}</option>
                   </select>
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label caption">MESSAGE</label>
+                  <label className="form-label caption">{t('contact.form.message')}</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows="5"
                     className="form-textarea"
-                    placeholder="Tell us about your project or goals..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     required
                   ></textarea>
                 </div>
@@ -181,7 +185,7 @@ const ContactPage = () => {
                 </div>
 
                 <button type="submit" className="btn-primary form-submit" disabled={isSubmitting}>
-                  {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'} <Send size={20} className="ml-2" />
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.sendMessage')} <Send size={20} className="ml-2" />
                 </button>
 
                 {submitStatus && (
@@ -194,7 +198,7 @@ const ContactPage = () => {
 
             {/* Contact Information */}
             <div className="contact-info-container">
-              <h2 className="info-title heading-3">BUSINESS HOURS</h2>
+              <h2 className="info-title heading-3">{t('contact.businessHours')}</h2>
               
               {/* Contact Info List - Temporarily Hidden */}
               {/*
@@ -222,19 +226,19 @@ const ContactPage = () => {
               */}
 
               <div className="business-hours">
-                <h4 className="hours-title heading-5">OFFICE HOURS</h4>
+                <h4 className="hours-title heading-5">{t('contact.officeHours')}</h4>
                 <div className="hours-list">
                   <div className="hours-item">
-                    <span className="day caption">MONDAY - FRIDAY</span>
-                    <span className="time body-small">9:00 - 18:00 CET</span>
+                    <span className="day caption">{t('contact.hours.mondayFriday')}</span>
+                    <span className="time body-small">{t('contact.hours.mondayFridayTime')}</span>
                   </div>
                   <div className="hours-item">
-                    <span className="day caption">SATURDAY</span>
-                    <span className="time body-small">10:00 - 16:00 CET</span>
+                    <span className="day caption">{t('contact.hours.saturday')}</span>
+                    <span className="time body-small">{t('contact.hours.saturdayTime')}</span>
                   </div>
                   <div className="hours-item">
-                    <span className="day caption">SUNDAY</span>
-                    <span className="time body-small">CLOSED</span>
+                    <span className="day caption">{t('contact.hours.sunday')}</span>
+                    <span className="time body-small">{t('contact.hours.sundayTime')}</span>
                   </div>
                 </div>
               </div>
@@ -250,19 +254,19 @@ const ContactPage = () => {
             <div className="footer-left">
               <h3 className="footer-logo">TC INVESTMENTS</h3>
               <p className="footer-description body-small">
-                Growing businesses through strategic investments, consulting, and AI solutions.
+                {t('footer.description')}
               </p>
             </div>
             <div className="footer-right">
               <div className="footer-links">
-                <Link to="/" className="footer-link">Home</Link>
-                <Link to="/contact" className="footer-link">Contact</Link>
+                <Link to="/" className="footer-link">{t('navigation.home')}</Link>
+                <Link to="/contact" className="footer-link">{t('navigation.contact')}</Link>
                 <Link to="/ebook" className="footer-link">Ebook</Link>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <p className="copyright caption">© 2024 TC Investments. All rights reserved.</p>
+            <p className="copyright caption">{t('footer.copyright')}</p>
           </div>
         </div>
       </footer>
