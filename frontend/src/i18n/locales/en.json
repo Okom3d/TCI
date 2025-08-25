@@ -1,0 +1,154 @@
+{
+  "navigation": {
+    "home": "HOME",
+    "contact": "CONTACT",
+    "backToHome": "BACK TO HOME"
+  },
+  "hero": {
+    "title": "ENTREPRENEUR\nINVESTOR\nCONSULTANT",
+    "description": "Always looking for new opportunities to grow businesses and create value through strategic investments and AI-powered solutions.",
+    "getStarted": "GET STARTED",
+    "exploreEbook": "EXPLORE EBOOK"
+  },
+  "services": {
+    "title": "OUR SERVICES",
+    "subtitle": "Three key areas where we create exceptional value for our clients",
+    "consultation": {
+      "title": "CONSULTATION",
+      "description": "Strategic business consulting for growth, management, and marketing optimization. Transform your operations with proven methodologies."
+    },
+    "investments": {
+      "title": "INVESTMENTS", 
+      "description": "Discover lucrative investment opportunities and strategic partnerships. Let's build wealth together through smart investments."
+    },
+    "ebook": {
+      "title": "EBOOK FORMATIONS",
+      "description": "Comprehensive guides and educational resources covering diverse topics from business strategies to parenting excellence and personal development."
+    }
+  },
+  "carousel": {
+    "title": "GROWTH & INVESTMENTS",
+    "subtitle": "Showcasing our expertise in business growth, real estate development, and strategic investments",
+    "items": {
+      "strategicGrowth": {
+        "title": "Strategic Growth",
+        "description": "Building success step by step with proven methodologies"
+      },
+      "dataDriven": {
+        "title": "Data-Driven Decisions", 
+        "description": "Leveraging analytics for optimal investment outcomes"
+      },
+      "urbanDevelopment": {
+        "title": "Urban Development",
+        "description": "Modern real estate opportunities in growing markets"
+      },
+      "investmentAnalysis": {
+        "title": "Investment Analysis",
+        "description": "Thorough market research and property evaluation"
+      },
+      "realEstateExcellence": {
+        "title": "Real Estate Excellence",
+        "description": "Contemporary developments with strong ROI potential"
+      },
+      "nurturingGrowth": {
+        "title": "Nurturing Growth",
+        "description": "Cultivating long-term success through careful planning"
+      }
+    }
+  },
+  "contact": {
+    "heroTitle": "GET IN TOUCH",
+    "heroDescription": "Ready to grow your business? Let's discuss how we can help you achieve your goals.",
+    "formTitle": "SEND US A MESSAGE",
+    "businessHours": "BUSINESS HOURS",
+    "officeHours": "OFFICE HOURS",
+    "form": {
+      "fullName": "FULL NAME",
+      "emailAddress": "EMAIL ADDRESS", 
+      "company": "COMPANY (OPTIONAL)",
+      "serviceInterest": "SERVICE OF INTEREST",
+      "message": "MESSAGE",
+      "messagePlaceholder": "Tell us about your project or goals...",
+      "sendMessage": "SEND MESSAGE",
+      "sending": "SENDING..."
+    },
+    "services": {
+      "consultation": "Business Consultation",
+      "investments": "Investment Opportunities", 
+      "aiConsulting": "AI Consulting",
+      "ebook": "Ebook Formations"
+    },
+    "hours": {
+      "mondayFriday": "MONDAY - FRIDAY",
+      "saturday": "SATURDAY", 
+      "sunday": "SUNDAY",
+      "mondayFridayTime": "9:00 - 18:00 CET",
+      "saturdayTime": "10:00 - 16:00 CET",
+      "sundayTime": "CLOSED"
+    },
+    "success": "Your message has been sent successfully!",
+    "error": "Failed to send message. Please try again or contact us directly.",
+    "recaptchaRequired": "Please complete the reCAPTCHA verification."
+  },
+  "ebook": {
+    "comingSoon": "COMING SOON",
+    "title": "EBOOK FORMATIONS",
+    "description": "Comprehensive guides covering diverse topics from business growth strategies to parenting excellence. As a father of a 2.5-year-old, I believe in continuous improvement in every aspect of life - get ready to transform with our exclusive educational content.",
+    "whatToExpect": "WHAT TO EXPECT",
+    "getNotified": "GET NOTIFIED WHEN IT'S READY",
+    "notifyDescription": "Be the first to know when our comprehensive business formation ebook becomes available.",
+    "notifyMe": "NOTIFY ME",
+    "signingUp": "SIGNING UP...",
+    "emailPlaceholder": "Enter your email address",
+    "readyToGrow": "READY TO GROW YOUR BUSINESS NOW?",
+    "readyDescription": "Don't wait for the ebook. Start your transformation today with our consultation services.",
+    "startConsultation": "START CONSULTATION",
+    "exploreInvestments": "EXPLORE INVESTMENTS",
+    "features": {
+      "businessPlanning": "Strategic Business Planning & Execution",
+      "parentingExcellence": "Parenting Excellence & Child Development",
+      "investmentOptimization": "Investment Portfolio Optimization", 
+      "personalDevelopment": "Personal Development & Life Skills",
+      "leadership": "Leadership & Management Best Practices",
+      "healthWellness": "Health & Wellness Transformation"
+    },
+    "chapters": {
+      "parentingExcellence": {
+        "title": "PARENTING EXCELLENCE",
+        "description": "Essential foundations for your child's best start in life. Written by a father of a 2.5-year-old who believes in continuous improvement in every aspect of parenting and child development."
+      },
+      "businessFoundations": {
+        "title": "BUSINESS FOUNDATIONS", 
+        "description": "Building strong business fundamentals and strategic planning frameworks for sustainable growth and success."
+      },
+      "investmentStrategies": {
+        "title": "INVESTMENT STRATEGIES",
+        "description": "Smart investment approaches for individuals and business owners looking to multiply their wealth effectively."
+      },
+      "personalDevelopment": {
+        "title": "PERSONAL DEVELOPMENT",
+        "description": "Life skills, productivity techniques, and personal growth strategies for achieving your full potential."
+      },
+      "leadershipExcellence": {
+        "title": "LEADERSHIP EXCELLENCE", 
+        "description": "Management philosophies and leadership strategies that inspire teams and drive organizational success."
+      },
+      "healthWellness": {
+        "title": "HEALTH & WELLNESS",
+        "description": "Comprehensive wellness strategies, fitness routines, and healthy lifestyle habits for optimal living."
+      }
+    },
+    "success": "Thank you! We'll notify you when the ebook is ready.",
+    "error": "Failed to sign up for notifications. Please try again.",
+    "recaptchaRequired": "Please complete the reCAPTCHA verification."
+  },
+  "footer": {
+    "description": "Growing businesses through strategic investments, consulting, and AI solutions.",
+    "copyright": "© 2024 TC Investments. All rights reserved."
+  },
+  "language": {
+    "switchTo": "Switch to",
+    "french": "Français",
+    "english": "English"
+  }
+}
