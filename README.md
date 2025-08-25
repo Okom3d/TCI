@@ -59,6 +59,9 @@ tc-investments/
 │   ├── src/
 │   │   ├── components/      # React components
 │   │   ├── services/        # Email service integration
+│   │   ├── i18n/           # Internationalization setup
+│   │   │   ├── locales/    # Translation files (en.json, fr.json)
+│   │   │   └── i18n.js     # i18n configuration
 │   │   ├── utils/           # Mock data and utilities
 │   │   └── App.js           # Main application
 │   ├── public/              # Static assets
