@@ -1,7 +1,8 @@
 {
-  "name": "frontend",
+  "name": "tc-investments-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://YOURUSERNAME.github.io/tc-investments",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^5.0.1",
