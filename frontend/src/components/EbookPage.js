@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ArrowLeft, Clock, Mail } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { mockData } from "../utils/mock";
 import { sendEbookNotification, RECAPTCHA_CONFIG } from "../services/emailService";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const EbookPage = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -38,11 +41,28 @@ const EbookPage = () => {
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'An unexpected error occurred. Please try again.'
+        message: t('ebook.error')
       });
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Get translated chapter data
+  const getChapterData = () => {
+    const chapterKeys = [
+      'parentingExcellence',
+      'businessFoundations', 
+      'investmentStrategies',
+      'personalDevelopment',
+      'leadershipExcellence',
+      'healthWellness'
+    ];
+
+    return chapterKeys.map(key => ({
+      title: t(`ebook.chapters.${key}.title`),
+      description: t(`ebook.chapters.${key}.description`)
+    }));
   };
 
   return (
@@ -57,8 +77,9 @@ const EbookPage = () => {
             <div className="nav-links">
               <Link to="/" className="nav-link">
                 <ArrowLeft size={20} className="mr-2" />
-                BACK TO HOME
+                {t('navigation.backToHome')}
               </Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -70,39 +91,55 @@ const EbookPage = () => {
           <div className="coming-soon-content">
             <div className="status-badge">
               <Clock size={16} />
-              <span className="caption">COMING SOON</span>
+              <span className="caption">{t('ebook.comingSoon')}</span>
             </div>
             
-            <h1 className="hero-title heading-1">EBOOK FORMATIONS</h1>
+            <h1 className="hero-title heading-1">{t('ebook.title')}</h1>
             
             <p className="hero-description body-large">
-              Comprehensive guides covering diverse topics from business growth strategies to parenting excellence. 
-              As a father of a 2.5-year-old, I believe in continuous improvement in every aspect of life - 
-              get ready to transform with our exclusive educational content.
+              {t('ebook.description')}
             </p>
 
             <div className="coming-soon-features">
               <div className="feature-list">
-                {mockData.ebookFeatures.map((feature, index) => (
-                  <div key={index} className="feature-item">
-                    <div className="feature-icon">•</div>
-                    <span className="feature-text body-medium">{feature}</span>
-                  </div>
-                ))}
+                <div className="feature-item">
+                  <div className="feature-icon">•</div>
+                  <span className="feature-text body-medium">{t('ebook.features.businessPlanning')}</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">•</div>
+                  <span className="feature-text body-medium">{t('ebook.features.parentingExcellence')}</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">•</div>
+                  <span className="feature-text body-medium">{t('ebook.features.investmentOptimization')}</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">•</div>
+                  <span className="feature-text body-medium">{t('ebook.features.personalDevelopment')}</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">•</div>
+                  <span className="feature-text body-medium">{t('ebook.features.leadership')}</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">•</div>
+                  <span className="feature-text body-medium">{t('ebook.features.healthWellness')}</span>
+                </div>
               </div>
             </div>
 
             <div className="notify-section">
-              <h3 className="notify-title heading-4">GET NOTIFIED WHEN IT'S READY</h3>
+              <h3 className="notify-title heading-4">{t('ebook.getNotified')}</h3>
               <p className="notify-description body-small">
-                Be the first to know when our comprehensive business formation ebook becomes available.
+                {t('ebook.notifyDescription')}
               </p>
               
               <div className="notify-form">
                 <form onSubmit={handleNotifySubmit}>
                   <input 
                     type="email" 
-                    placeholder="Enter your email address"
+                    placeholder={t('ebook.emailPlaceholder')}
                     className="notify-input"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -121,7 +158,7 @@ const EbookPage = () => {
                   </div>
                   
                   <button type="submit" className="btn-primary notify-btn" disabled={isSubmitting}>
-                    {isSubmitting ? 'SIGNING UP...' : 'NOTIFY ME'} <Mail size={20} className="ml-2" />
+                    {isSubmitting ? t('ebook.signingUp') : t('ebook.notifyMe')} <Mail size={20} className="ml-2" />
                   </button>
                 </form>
                 
@@ -139,10 +176,10 @@ const EbookPage = () => {
       {/* Preview Section */}
       <section className="preview-section">
         <div className="container">
-          <h2 className="section-title heading-2">WHAT TO EXPECT</h2>
+          <h2 className="section-title heading-2">{t('ebook.whatToExpect')}</h2>
           
           <div className="preview-grid">
-            {mockData.ebookChapters.map((chapter, index) => (
+            {getChapterData().map((chapter, index) => (
               <div key={index} className="preview-card">
                 <div className="chapter-number">
                   <span className="number heading-3">{String(index + 1).padStart(2, '0')}</span>
@@ -161,16 +198,16 @@ const EbookPage = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2 className="cta-title heading-2">READY TO GROW YOUR BUSINESS NOW?</h2>
+            <h2 className="cta-title heading-2">{t('ebook.readyToGrow')}</h2>
             <p className="cta-description body-medium">
-              Don't wait for the ebook. Start your transformation today with our consultation services.
+              {t('ebook.readyDescription')}
             </p>
             <div className="cta-actions">
               <Link to="/contact" className="btn-primary">
-                START CONSULTATION
+                {t('ebook.startConsultation')}
               </Link>
               <Link to="/investments" className="btn-secondary">
-                EXPLORE INVESTMENTS
+                {t('ebook.exploreInvestments')}
               </Link>
             </div>
           </div>
@@ -184,19 +221,19 @@ const EbookPage = () => {
             <div className="footer-left">
               <h3 className="footer-logo">TC INVESTMENTS</h3>
               <p className="footer-description body-small">
-                Growing businesses through strategic investments, consulting, and AI solutions.
+                {t('footer.description')}
               </p>
             </div>
             <div className="footer-right">
               <div className="footer-links">
-                <Link to="/" className="footer-link">Home</Link>
-                <Link to="/contact" className="footer-link">Contact</Link>
+                <Link to="/" className="footer-link">{t('navigation.home')}</Link>
+                <Link to="/contact" className="footer-link">{t('navigation.contact')}</Link>
                 <Link to="/ebook" className="footer-link">Ebook</Link>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <p className="copyright caption">© 2024 TC Investments. All rights reserved.</p>
+            <p className="copyright caption">{t('footer.copyright')}</p>
           </div>
         </div>
       </footer>
