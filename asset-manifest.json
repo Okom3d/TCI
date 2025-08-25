@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TCI/static/css/main.2328252f.css",
+    "main.js": "/TCI/static/js/main.765cfe29.js",
+    "index.html": "/TCI/index.html",
+    "main.2328252f.css.map": "/TCI/static/css/main.2328252f.css.map",
+    "main.765cfe29.js.map": "/TCI/static/js/main.765cfe29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2328252f.css",
+    "static/js/main.765cfe29.js"
+  ]
+}
