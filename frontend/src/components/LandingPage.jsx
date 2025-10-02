@@ -41,9 +41,7 @@ const LandingPage = () => {
               <Link to="/contact" className="btn-primary">
                 {t('hero.getStarted')} <ArrowRight className="ml-2" size={20} />
               </Link>
-              <Link to="/ebook" className="btn-secondary">
-                {t('hero.exploreEbook')}
-              </Link>
+                {/* Bouton Ebook supprimé */}
             </div>
           </div>
         </div>
@@ -51,56 +49,37 @@ const LandingPage = () => {
 
       {/* Services Section */}
       <section className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title heading-2">{t('services.title')}</h2>
-            <p className="section-subtitle body-medium">
-              {t('services.subtitle')}
-            </p>
-          </div>
-          
-          <div className="services-grid">
-            <Link to="/consultation" className="service-card">
-              <div className="service-icon">
-                <Users size={40} />
-              </div>
-              <div className="service-content">
-                <h3 className="service-title heading-4">{t('services.consultation.title')}</h3>
-                <p className="service-description body-small">{t('services.consultation.description')}</p>
-                <div className="service-arrow">
-                  <ArrowRight size={24} />
-                </div>
-              </div>
-            </Link>
+  <div className="container">
+    <div className="section-header">
+      <h2 className="section-title heading-2">{t('services.title')}</h2>
+      <p className="section-subtitle body-medium">
+        {t('services.subtitle')}
+      </p>
+    </div>
 
-            <Link to="/investments" className="service-card">
-              <div className="service-icon">
-                <TrendingUp size={40} />
-              </div>
-              <div className="service-content">
-                <h3 className="service-title heading-4">{t('services.investments.title')}</h3>
-                <p className="service-description body-small">{t('services.investments.description')}</p>
-                <div className="service-arrow">
-                  <ArrowRight size={24} />
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/ebook" className="service-card">
-              <div className="service-icon">
-                <BookOpen size={40} />
-              </div>
-              <div className="service-content">
-                <h3 className="service-title heading-4">{t('services.ebook.title')}</h3>
-                <p className="service-description body-small">{t('services.ebook.description')}</p>
-                <div className="service-arrow">
-                  <ArrowRight size={24} />
-                </div>
-              </div>
-            </Link>
-          </div>
+    <div className="services-grid">
+      <Link to="/consultation" className="service-card">
+        <div className="service-icon"><Users size={40} /></div>
+        <div className="service-content">
+          <h3 className="service-title heading-4">{t('services.consultation.title')}</h3>
+          <p className="service-description body-small">{t('services.consultation.description')}</p>
+          <div className="service-arrow"><ArrowRight size={24} /></div>
         </div>
-      </section>
+      </Link>
+
+      <Link to="/investments" className="service-card">
+        <div className="service-icon"><TrendingUp size={40} /></div>
+        <div className="service-content">
+          <h3 className="service-title heading-4">{t('services.investments.title')}</h3>
+          <p className="service-description body-small">{t('services.investments.description')}</p>
+          <div className="service-arrow"><ArrowRight size={24} /></div>
+        </div>
+      </Link>
+
+      {/* Carte Ebook supprimée */}
+    </div>
+  </div>
+</section>
 
       {/* Growth Showcase Carousel */}
       <section className="growth-carousel-section">
@@ -210,7 +189,7 @@ const LandingPage = () => {
               <div className="footer-links">
                 <Link to="/" className="footer-link">{t('navigation.home')}</Link>
                 <Link to="/contact" className="footer-link">{t('navigation.contact')}</Link>
-                <Link to="/ebook" className="footer-link">Ebook</Link>
+                {/* Lien Ebook supprimé */}
               </div>
             </div>
           </div>

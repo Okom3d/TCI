@@ -157,7 +157,7 @@ const ContactPage = () => {
                     <option value="consultation">{t('contact.services.consultation')}</option>
                     <option value="investments">{t('contact.services.investments')}</option>
                     <option value="ai-consulting">{t('contact.services.aiConsulting')}</option>
-                    <option value="ebook">{t('contact.services.ebook')}</option>
+                    {/* option Ebook supprimée */}
                   </select>
                 </div>
 
@@ -261,7 +261,7 @@ const ContactPage = () => {
               <div className="footer-links">
                 <Link to="/" className="footer-link">{t('navigation.home')}</Link>
                 <Link to="/contact" className="footer-link">{t('navigation.contact')}</Link>
-                <Link to="/ebook" className="footer-link">Ebook</Link>
+                {/* Lien Ebook supprimé */}
               </div>
             </div>
           </div>

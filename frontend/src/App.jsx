@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import ContactPage from "./components/ContactPage";
-import EbookPage from "./components/EbookPage";
 
 function App() {
   return (
@@ -14,7 +13,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/consultation" element={<ContactPage />} />
           <Route path="/investments" element={<ContactPage />} />
-          <Route path="/ebook" element={<EbookPage />} />
+          {/* (optionnel) rediriger les anciens liens /ebook vers l'accueil */}
+          <Route path="/ebook" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </div>
